@@ -1,2 +1,0 @@
-# GTSecurities
-Alex's app
