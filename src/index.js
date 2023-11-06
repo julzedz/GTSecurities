@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
 
-const Booklist = () => {
+const BookList = () => {
   return (
     <section>
+      <Book />
       <Book />
       <Book />
       <Book />
@@ -12,20 +14,23 @@ const Booklist = () => {
 }
 function Book() {
   return (
-    <>
+    <article>
+      <Image />
       <Title />
       <Author />
-      <Image />
-    </>
+    </article>
   );
 }
 
-const Title = () => <h2> Book</h2>
-const Author = () => <h4> Jon Dough</h4>
-const Image = () => {
-  return <p>Hello World</p>
-}
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/81uds3w9VuL._AC_UL900_SR900,600_.jpg"
+    alt="Just Eat: More Than 100 Easy and Delicious Recipes That Taste Just Like Home"
+  />
+);
+const Title = () => <h2>Just Eat: More Than 100 Easy and Delicious Recipes That Taste Just Like Home</h2>
+const Author = () => <h4> Jessie James Decker</h4>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Booklist />);
+root.render(<BookList />);
